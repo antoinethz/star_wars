@@ -1,0 +1,33 @@
+.fiche {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.details p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.details a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.details a:hover {
+  text-decoration: underline;
+}
+
+.goBackButton:hover {
+  background-color: #0056b3;
+}
