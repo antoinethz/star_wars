@@ -17,7 +17,9 @@ function App() {
   return (
     <Router>
       <div className={styles.container}>
-        <h1 className={styles.title}>Star Wars Rebels Search</h1>
+        <h1 className={styles.title}>
+          Star Wars Rebels Alliance Search System
+        </h1>
         {!isAuthenticated ? (
           <Login></Login>
         ) : (

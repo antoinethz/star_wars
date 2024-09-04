@@ -22,7 +22,7 @@ function Login() {
       setAuthError("");
     } catch (error) {
       console.error("Authentication failed:", error);
-      setAuthError("Authentification échouée ! Membre de l'Empire détecté !");
+      setAuthError("Authentification échouée !");
     }
   };
 

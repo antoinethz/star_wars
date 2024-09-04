@@ -32,3 +32,14 @@
 .vehicles {
   color: purple;
 }
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.nothing {
+  color: #feda4a;
+}

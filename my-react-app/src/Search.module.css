@@ -4,7 +4,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .searchSelect {
@@ -12,7 +18,7 @@
   padding: 10px;
   border: 2px solid #ccc;
   border-radius: 5px 0 0 5px;
-  font-size: 16px;
+  font-size: 13px;
   background-color: white;
   cursor: pointer;
   outline: none;
@@ -20,7 +26,7 @@
 
 .searchInput {
   padding: 15px;
-  font-size: 15px;
+  font-size: 13px;
   border-left: none;
   border-radius: 0;
   flex-grow: 1;
@@ -32,4 +38,34 @@
   .searchInput {
     width: 30vw;
   }
+}
+
+.legend {
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+  column-gap: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.people {
+  color: blue;
+}
+
+.planets {
+  color: green;
+}
+
+.starships {
+  color: red;
+}
+
+.species {
+  color: yellow;
+}
+
+.vehicles {
+  color: purple;
 }

@@ -19,7 +19,6 @@ function Search() {
       const response = await axios.get(`http://localhost:3000/search`, {
         params: {
           query: query,
-          type: searchType,
         },
         auth: {
           username: username,
@@ -40,13 +39,12 @@ function Search() {
       const timeoutId = setTimeout(() => {
         handleSearch(query);
       }, 500);
-
       return () => clearTimeout(timeoutId);
     }
   }, [query, searchType]);
 
   return (
-    <div>
+    <div className={styles.box}>
       <div className={styles.searchContainer}>
         <input
           className={styles.searchInput}
@@ -61,14 +59,21 @@ function Search() {
           onChange={(e) => setSearchType(e.target.value)}
         >
           <option value="all">All</option>
-          <option value="people">Characters</option>
+          <option value="people">People</option>
           <option value="starships">Starships</option>
           <option value="planets">Planets</option>
           <option value="vehicles">Vehicles</option>
           <option value="species">Species</option>
         </select>
       </div>
-      <List></List>
+      <div className={styles.legend}>
+        <p className={styles.people}>People</p>
+        <p className={styles.planets}>Planets</p>
+        <p className={styles.species}>Species</p>
+        <p className={styles.starships}>Starships</p>
+        <p className={styles.vehicles}>Vehicles</p>
+      </div>
+      <List type={searchType}></List>
     </div>
   );
 }
