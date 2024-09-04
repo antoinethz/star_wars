@@ -41,7 +41,7 @@ function Search() {
       }, 500);
       return () => clearTimeout(timeoutId);
     }
-  }, [query, searchType]);
+  }, [query]);
 
   return (
     <div className={styles.box}>
