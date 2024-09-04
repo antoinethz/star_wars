@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
-
 import { useNavigate } from "react-router-dom";
+import List from "./List";
+import styles from "./Search.module.css";
 
 function Search() {
   const { username, password, isAuthenticated } = useSelector(
@@ -34,27 +35,40 @@ function Search() {
     }
   };
 
+  useEffect(() => {
+    if (query.trim()) {
+      const timeoutId = setTimeout(() => {
+        handleSearch(query);
+      }, 500);
+
+      return () => clearTimeout(timeoutId);
+    }
+  }, [query, searchType]);
+
   return (
     <div>
-      <h2>Search</h2>
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search for a character"
-      />
-      <select
-        value={searchType}
-        onChange={(e) => setSearchType(e.target.value)}
-      >
-        <option value="all">All</option>
-        <option value="people">Characters</option>
-        <option value="starships">Starships</option>
-        <option value="planets">Planets</option>
-        <option value="vehicles">Vehicles</option>
-        <option value="species">Species</option>
-      </select>
-      <button onClick={handleSearch}>Search</button>
+      <div className={styles.searchContainer}>
+        <input
+          className={styles.searchInput}
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search"
+        />
+        <select
+          className={styles.searchSelect}
+          value={searchType}
+          onChange={(e) => setSearchType(e.target.value)}
+        >
+          <option value="all">All</option>
+          <option value="people">Characters</option>
+          <option value="starships">Starships</option>
+          <option value="planets">Planets</option>
+          <option value="vehicles">Vehicles</option>
+          <option value="species">Species</option>
+        </select>
+      </div>
+      <List></List>
     </div>
   );
 }

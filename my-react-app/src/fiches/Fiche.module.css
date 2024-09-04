@@ -2,16 +2,18 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 20px;
-  max-width: 400px;
+  max-width: 450px;
   margin: 20px auto;
   background-color: #f9f9f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .heading {
   text-align: center;
-  color: #333;
-  margin-bottom: 20px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 25px;
 }
 
 .details p {
@@ -19,15 +21,31 @@
   font-size: 16px;
 }
 
-.details a {
-  color: #007bff;
-  text-decoration: none;
+.type {
+  position: absolute;
+  font-size: 12px;
+  opacity: 0.3;
+  top: 5px;
+  right: 5px;
+  text-transform: uppercase;
 }
 
-.details a:hover {
-  text-decoration: underline;
+.people {
+  color: blue;
 }
 
-.goBackButton:hover {
-  background-color: #0056b3;
+.planets {
+  color: green;
+}
+
+.starships {
+  color: red;
+}
+
+.species {
+  color: yellow;
+}
+
+.vehicles {
+  color: purple;
 }

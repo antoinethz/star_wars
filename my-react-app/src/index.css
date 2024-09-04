@@ -1,1 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Star Jedi", sans-serif; /* Remplace par ta police Star Wars personnalisée */
+  text-transform: uppercase;
+  text-align: center;
+
+  color: #feda4a;
+}
+
+* {
+  font-family: "Press Start 2P";
+}
+
+/* Background étoilé pour toute la page */
+body {
+  background: black; /* Fond noir */
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: #feda4a;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}

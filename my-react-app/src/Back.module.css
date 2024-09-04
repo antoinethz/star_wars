@@ -1,8 +1,8 @@
 .goBackButton {
   display: block;
-  margin: 20px auto;
+  margin: 20px auto 0px auto;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #feda4a;
   color: white;
   border: none;
   border-radius: 5px;

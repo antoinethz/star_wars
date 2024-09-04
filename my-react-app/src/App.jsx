@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Login from "./Login";
 import Search from "./Search";
-import List from "./List";
+import styles from "./App.module.css";
 
 import FichePeople from "./fiches/FichePeople";
 import FicheSpecies from "./fiches/FicheSpecies";
@@ -16,8 +16,8 @@ function App() {
 
   return (
     <Router>
-      <div>
-        <h1>Star Wars Rebels Search</h1>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Star Wars Rebels Search</h1>
         {!isAuthenticated ? (
           <Login></Login>
         ) : (
@@ -28,7 +28,7 @@ function App() {
             />
             <Route
               path="/search/:query?"
-              element={<List />}
+              element={<Search />}
             />
             <Route
               path="/people/:name"

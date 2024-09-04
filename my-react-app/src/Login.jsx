@@ -18,7 +18,6 @@ function Login() {
           password: password,
         },
       });
-      // Dispatch the login action to store username and password in Redux
       dispatch(login({ username, password }));
       setAuthError("");
     } catch (error) {

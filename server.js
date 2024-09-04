@@ -48,7 +48,6 @@ const start = async () => {
         handler: async (request, h) => {
           const { query, type } = request.query;
     
-          // URLs pour les différents types de données dans SWAPI
           const endpoints = {
             people: `https://swapi.dev/api/people/?search=${query}`,
             starships: `https://swapi.dev/api/starships/?search=${query}`,
@@ -61,7 +60,6 @@ const start = async () => {
             let results = [];
     
             if (type === 'all') {
-              // Rechercher dans tous les types
               const responses = await Promise.all(
                 Object.keys(endpoints).map(async (key) => {
                   const response = await axios.get(endpoints[key]);

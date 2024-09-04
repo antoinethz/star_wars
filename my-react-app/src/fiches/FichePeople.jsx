@@ -10,6 +10,9 @@ const FichePeople = () => {
 
   return (
     <div className={styles.fiche}>
+      <div className={`${styles.type} ${styles[result.type]}`}>
+        {result.type}
+      </div>
       <h2 className={styles.heading}>{result.name}</h2>
       <div className={styles.details}>
         <p>

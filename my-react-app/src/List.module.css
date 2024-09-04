@@ -1,0 +1,34 @@
+.linkItem {
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.linkItem:hover {
+  opacity: 0.7;
+}
+
+.people {
+  color: blue;
+}
+
+.planets {
+  color: green;
+}
+
+.starships {
+  color: red;
+}
+
+.species {
+  color: yellow;
+}
+
+.vehicles {
+  color: purple;
+}
